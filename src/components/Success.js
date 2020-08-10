@@ -8,22 +8,17 @@ export class Success extends Component {
         this.props.nextStep();
     }
     render() {
-        const { values , handleChange} = this.props
         return (
             <MuiThemeProvider>
                 <React.Fragment>
                     <AppBar title="Success"/>
-                    <h1> Thank you for your submission</h1>
-                    <p>You will get an email with further instruction</p>
+                    <h1>Thank you for your submission</h1>
+                    <p> You will get an email with further instructions </p>
                 
                 </React.Fragment>
             </MuiThemeProvider>
         )
     }
 }
-
-const styles  = { 
-    button: { margin: 15 } 
- };
 
 export default Success

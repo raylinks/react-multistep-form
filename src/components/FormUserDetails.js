@@ -11,6 +11,7 @@ export class FormUserDetails extends Component {
     }
     render() {
         const { values , handleChange} = this.props
+       // const { values: { firstName , lastName, email, occupation, city, bio} } = this.props
         return (
             <MuiThemeProvider>
                 <React.Fragment>
