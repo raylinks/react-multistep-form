@@ -21,7 +21,7 @@ export class FormUserDetails extends Component {
                     <br/>
                     <TextField hintText="Enter  your email" floatingLabelFixed="email" onChange={handleChange("email")} defaultValue={values.email} />
                     <br/>
-                    <RaisedButton label="Continue" primary={true} style={styles.button}/>
+                    <RaisedButton label="Continue" primary={true} style={styles.button} onClick={this.continue} />
                 </React.Fragment>
             </MuiThemeProvider>
         )

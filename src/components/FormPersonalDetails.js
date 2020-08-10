@@ -9,23 +9,37 @@ export class FormPersonalDetails extends Component {
         e.preventDefault(); 
         this.props.nextStep();
     }
+
+    back = e => {
+        e.preventDefault(); 
+        this.props.prevStep();
+    }
+
     render() {
         const { values , handleChange} = this.props
         return (
             <MuiThemeProvider>
                 <React.Fragment>
                     <AppBar title="Enter user details"/>
-                    <TextField hintText="Enter  your First Name" floatingLabelFixed="First Name" onChange={handleChange("firstName")} defaultValue={values.firstName} />
+                    <TextField hintText="Enter  your Personal details" floatingLabelFixed="First Name" onChange={handleChange("firstName")} defaultValue={values.firstName} />
                    <br/>
-                    <TextField hintText="Enter  your Last Name" floatingLabelFixed="Last Name" onChange={handleChange("lastName")} defaultValue={values.lastName} />
+                    <TextField hintText="Enter  your Occupation" floatingLabelFixed="Occupation" onChange={handleChange("occupation")} defaultValue={values.occupation} />
                     <br/>
-                    <TextField hintText="Enter  your email" floatingLabelFixed="email" onChange={handleChange("email")} defaultValue={values.email} />
+                    <TextField hintText="Enter  your city" floatingLabelFixed="City" onChange={handleChange("city")} defaultValue={values.city} />
+                     <br/>
+                    <TextField hintText="Enter  your Bio" floatingLabelFixed="Bio" onChange={handleChange("bio")} defaultValue={values.bio} />
                     <br/>
-                    <RaisedButton label="Continue" primary={true} style={styles.button}/>
+                    <RaisedButton label="Continue" primary={true} style={styles.button} onClick={this.continue}/>
+                    <RaisedButton label="Back" primary={false} style={styles.button}  onClick={this.back}/>
                 </React.Fragment>
             </MuiThemeProvider>
         )
     }
 }
+
+const styles  = { 
+    button: { margin: 15 } 
+ };
+
 
 export default FormPersonalDetails
