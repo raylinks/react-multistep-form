@@ -20,7 +20,7 @@ export class Confirm extends Component {
 
 
     render() {
-        const { values: { firstName, lastName, email, occupation, city, bio } } = this.props
+        const { values: { firstName, lastName, email, occupation, city, bio , experience, workplace, skills, location} } = this.props
         return (
             <MuiThemeProvider>
                 <React.Fragment>
@@ -32,6 +32,10 @@ export class Confirm extends Component {
                         <ListItem primaryText="Occupation"  secondaryText={occupation}/>
                         <ListItem primaryText="City"  secondaryText={city}/>
                         <ListItem primaryText="Bio"  secondaryText={bio}/>
+                        <ListItem primaryText="Experience"  secondaryText={experience}/>
+                        <ListItem primaryText="Location"  secondaryText={location}/>
+                        <ListItem primaryText="Skills"  secondaryText={skills}/>
+                        <ListItem primaryText="WORKPLACE"  secondaryText={workplace}/>
                     </List>
                    
                     <br/>
